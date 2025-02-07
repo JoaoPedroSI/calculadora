@@ -3,36 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora - João Pedro Martins</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form>
-        <h1>Calculadora </h1>
+    <div class="calculator">
+        <input type="text" id="display" class="display" disabled>
+        <div class="buttons">
+            <button class="button" onclick="appendNumber(7)">7</button>
+            <button class="button" onclick="appendNumber(8)">8</button>
+            <button class="button" onclick="appendNumber(9)">9</button>
+            <button class="button" onclick="setOperator('+')">+</button>
 
-        <div class="input-group">
-            <label for="n1">Número 1</label>
-            <input id="n1" type="number">
+            <button class="button" onclick="appendNumber(4)">4</button>
+            <button class="button" onclick="appendNumber(5)">5</button>
+            <button class="button" onclick="appendNumber(6)">6</button>
+            <button class="button" onclick="setOperator('-')">-</button>
+
+            <button class="button" onclick="appendNumber(1)">1</button>
+            <button class="button" onclick="appendNumber(2)">2</button>
+            <button class="button" onclick="appendNumber(3)">3</button>
+            <button class="button" onclick="setOperator('*')">*</button>
+
+            <button class="button" onclick="appendNumber(0)">0</button>
+            <button class="button" onclick="clearDisplay()">C</button>
+            <button class="button" onclick="calculate()">=</button>
+            <button class="button" onclick="setOperator('/')">/</button>
         </div>
-
-        <div class="input-group">
-            <label for="n2">Número 2</label>
-            <input id="n2" type="number">
-        </div>
-
-        <div class="input-group">
-            <label for="resultado">Resultado:</label>
-            <input id="resultado" type="text" disabled>
-        </div>
-
-        <div>
-            <button id="soma" type="button">+</button>
-            <button id="subtracao" type="button">-</button>
-            <button id="multiplicacao" type="button">*</button>
-            <button id="divisao" type="button">/</button>
-        </div>
-    </form>
-
-    <script src="script.js"></script> 
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
